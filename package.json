@@ -1,15 +1,15 @@
 {
-	"name": "@utily/worker-template",
+	"name": "worker-cookbook",
 	"version": "0.1.0",
-	"description": "Typescript template for Cloudflare Worker.",
-	"author": "Utily Contributors",
+	"description": "Cookbook storage implemented in Cloudflare Worker.",
+	"author": "Magnus93",
 	"license": "MIT",
 	"private": false,
-	"repository": "https://github.com/utily/worker-template",
+	"repository": "https://github.com/Magnus93/worker-cookbook",
 	"bugs": {
-		"url": "https://github.com/utily/worker-template/issues"
+		"url": "https://github.com/Magnus93/worker-cookbook/issues"
 	},
-	"homepage": "https://github.com/utily",
+	"homepage": "https://github.com/Magnus93",
 	"main": "dist/_worker.js",
 	"typings": "dist/index.d.ts",
 	"type": "module",
@@ -79,6 +79,7 @@
 	},
 	"dependencies": {
 		"authly": "^3.0.1",
+		"isly": "0.1.26",
 		"cloudly-http": "^0.2.0-alpha.7",
 		"cloudly-router": "^0.2.0-alpha.1",
 		"gracely": "^2.0.3",

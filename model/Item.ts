@@ -1,10 +1,20 @@
+import { isly } from "isly"
+import { Unit } from "./Unit"
+
 export interface Item {
-	id: string
-	number: number
+	name: string
+	quantity?: {
+		amount: number
+		unit: Unit
+	}
 }
 
 export namespace Item {
-	export function is(value: any | Item): value is Item {
-		return typeof value == "object" && typeof value.id == "string" && typeof value.number == "number"
-	}
+	export const type = isly.object<Item>({
+		name: isly.string(),
+		quantity: isly.object<{ amount: number, unit: Unit }>({
+			amount: isly.number(),
+			unit: Unit.type,
+		}).optional()	
+	})
 }
