@@ -1,9 +1,14 @@
-compatibility_date = "2023-10-16"
-name = "worker-template"
+compatibility_date = "2024-01-01"
+name = "worker-cookbook"
+account_id = "5b35215b046c82bd89f9032f6fb97d65"
 workers_dev = true
 routes = []
-vars = { }
+vars = {}
 main = "./dist/_worker.js"
+
+[[kv_namespaces]]
+binding = "DISH"
+id = "ebb2788881f846aa91f973db0e954da8"
 
 
 [build]
@@ -11,7 +16,7 @@ command = "npm install && npm run build"
 
 [env.production]
 workers_dev = false
-vars = {  }
+vars = {}
 durable_objects.bindings = []
 kv_namespaces = []
 r2_buckets = []

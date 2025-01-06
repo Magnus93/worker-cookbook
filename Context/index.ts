@@ -1,5 +1,6 @@
 import { http } from "cloudly-http"
 import { Environment as ContextEnvironment } from "./Environment"
+export { Env } from "./Env"
 
 export class Context {
 	constructor(public readonly environment: Context.Environment) {}
